@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CA:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/output.css" />
+    <title>Shortly</title>
+    <script
+      src="https://kit.fontawesome.com/59a5ac1eda.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar Area -->
+    <nav class="section-container relative py-6">
+      <div class="flex justify-between items-center">
+        <!-- Logo and links container -->
+        <div class="flex justify-center items-center space-x-8">
+          <!-- Logo Image -->
+          <a href="index.html"><img src="/images/logo.svg" alt="" /></a>
+          <!-- Menu Items -->
+          <div
+            class="hidden md:flex justify-center items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6"
+          >
+            <a
+              href="#feature"
+              class="text-extraSecondary hover:text-postSecondary text-base font-bold transition duration-150"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="text-extraSecondary hover:text-postSecondary text-base font-bold transition duration-150"
+              >Pricing</a
+            >
+            <a
+              href="#blog"
+              class="text-extraSecondary hover:text-postSecondary text-base font-bold transition duration-150"
+              >Blogs</a
+            >
+          </div>
+        </div>
+        <!-- Hamburger -->
+        <div
+          class="flex flex-col justify-center items-center md:hidden m-0 p-0 h-fit"
+        >
+          <button
+            id="menu-btn"
+            type="button"
+            class="z-40 block hamburger md:hidden focus:outline-none border-0 p-0 m-0"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom mb-0 pb-0"></span>
+          </button>
+        </div>
+        <div
+          class="hidden justify-center items-center md:flex md:flex-row space-x-6"
+        >
+          <a
+            href="login.html"
+            class="text-extraSecondary hover:text-postSecondary text-sm font-bold transition duration-150"
+          >
+            Login
+          </a>
+          <a
+            href="signup.html"
+            class="px-5 py-2 bg-primary text-white text-sm font-bold rounded-full shadow-sm hover:opacity-70 transition duration-150"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+      <!-- Mobile Menu Items -->
+      <div
+        id="mobile-menu"
+        class="container bg-secondary py-8 px-4 absolute top-20 rounded-sm opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-in-out transform z-30"
+      >
+        <div class="flex flex-col justify-center items-center space-y-4">
+          <a
+            href="#feature"
+            class="text-base text-white font-semibold w-full text-center"
+            >Features</a
+          >
+          <a
+            href="#pricing"
+            class="text-base text-white font-semibold w-full text-center"
+            >Pricing</a
+          >
+          <a
+            href="#blog"
+            class="text-base text-white font-semibold w-full text-center"
+            >Blogs</a
+          >
+          <a
+            href="login.html"
+            class="text-base text-white font-semibold w-full text-center pt-4 border-t border-gray-500"
+            >Login</a
+          >
+          <a
+            href="signup.html"
+            class="text-sm text-white font-semibold w-full text-center py-2 px-6 bg-primary rounded-full shadow-sm hover:opacity-70"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div
+      class="bg-gray-100 flex flex-col justify-center items-center md:h-screen py-12 px-4"
+    >
+      <!-- Login Container -->
+      <div
+        class="bg-white relative flex justify-center items-center space-x-2 rounded-xl shadow-lg"
+      >
+        <div
+          class="absolute flex flex-col justify-center items-center bg-gray-200 w-10 h-10 rounded-[50%] top-4 right-4 shadow-xl cursor-pointer hover:-translate-y-0.5 transition duration-200"
+        >
+          <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <!-- Left Section -->
+        <div class="flex flex-col justify-center py-12 px-6 max-w-[25rem]">
+          <h3 class="text-black text-xl font-bold font-mono my-4">Log In</h3>
+          <p class="text-slate-500 text-sm font-sans">
+            Log in to access your account quickly and securely.
+            <a href="signup.html" class="text-sm text-light text-gray-500"
+              >New here? Sign up now!</a
+            >
+          </p>
+          <input
+            type="text"
+            placeholder="Enter your email address"
+            class="text-slate-600 text-sm font-light border-2 p-4 border-slate-100 mt-8 mb-4 rounded-lg placeholder:text-blue-slate-600 outline-0"
+          />
+          <div
+            class="flex flex-col space-y-4 justify-between items-center my-4 md:flex-row md:space-x-4 md:space-y-0"
+          >
+            <a href="" class="text-sm text-light text-gray-500"
+              >Forgot password?</a
+            >
+            <button
+              class="bg-primary flex justify-center items-center space-x-2 px-8 py-4 text-white text-sm font-medium rounded-[4px] shadow-sm hover:shadow-lg shadow-cyan-100 hover:bg-opacity-90 transition hover:-translate-y-0.5 duration-200 w-full md:w-fit"
+            >
+              <span>Next</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="border-t-2 border-slate-200 my-8"></div>
+          <p class="text-zinc-400 text-sm font-light text-center">
+            Or log in with
+          </p>
+          <div
+            class="flex flex-col space-y-4 justify-between items-center my-8 md:flex-row md:space-x-4 md:space-y-0"
+          >
+            <div
+              class="flex justify-center items-center space-x-3 border-2 border-slate-100 py-3 px-5 text-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:translate-y-0.5 transition-all duration-200 w-full md:w-1/2"
+            >
+              <img class="w-6" src="/images/facebook.png" alt="" />
+              <span class="text-sm text-gray-500"> Facebook </span>
+            </div>
+            <div
+              class="flex justify-center items-center space-x-3 border-2 border-slate-100 py-3 px-5 text-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:translate-y-0.5 transition-all duration-200 w-full md:w-1/2"
+            >
+              <img class="w-6" src="/images/google.png" alt="" />
+              <span class="text-sm text-gray-500"> Google </span>
+            </div>
+          </div>
+        </div>
+        <!-- Right Section -->
+        <img
+          class="w-[280px] hidden md:block h-full"
+          src="/images/image.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="bg-postSecondary py-12 mx-auto">
+      <div class="container max-w-[90%] mx-auto lg:max-w-[80%]">
+        <div
+          class="footer-wrapper grid grid-cols-3 gap-4 md:flex justify-center items-start md:flex-row md:gap-x-4 md:justify-between md:items-start"
+        >
+          <img src="/images/logo.svg" alt="" class="logo hidden md:block" />
+          <!-- Features -->
+          <div class="col-start-1 flex flex-col space-y-2 w-full md:w-fit">
+            <h5 class="footer-heading">Features</h5>
+            <p class="footer-link">Link Shortening</p>
+            <p class="footer-link">Branded Links</p>
+            <p class="footer-link">Analytics</p>
+          </div>
+          <!-- Pricing -->
+          <div class="col-start-2 flex flex-col space-y-2 w-full md:w-fit">
+            <h5 class="footer-heading">Resources</h5>
+            <p class="footer-link">Blog</p>
+            <p class="footer-link">Developers</p>
+            <p class="footer-link">Support</p>
+          </div>
+          <!-- Resources -->
+          <div class="col-start-3 flex flex-col space-y-2 w-full md:w-fit">
+            <h5 class="footer-heading">Company</h5>
+            <p class="footer-link">About Us</p>
+            <p class="footer-link">Our Team</p>
+            <p class="footer-link">Career</p>
+            <p class="footer-link">Contact</p>
+          </div>
+          <!-- Desktop Social Icons -->
+          <div class="hidden md:block">
+            <div class="md:flex items-star space-x-3">
+              <img
+                src="/images/icon-instagram.svg"
+                alt="instagram"
+                class="ficon transition duration-150"
+              />
+              <img
+                src="/images/icon-twitter.svg"
+                alt="twitter"
+                class="ficon transition duration-150"
+              />
+              <img
+                src="/images/icon-facebook.svg"
+                alt="facebook"
+                class="ficon transition duration-150"
+              />
+              <img
+                src="/images/icon-pinterest.svg"
+                alt="pinterest"
+                class="ficon transition duration-150"
+              />
+            </div>
+            <div class="text-right text-white text-xs mt-4">
+              <a href="#">
+                <i class="fas fa-code"></i> by
+                <strong class="uppercase">AD-M INNOVATIONS</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Mobile Social Icons -->
+        <div class="container">
+          <div
+            class="flex justify-between items-center md:hidden pt-8 pb-2 max-w-[85%] mx-auto"
+          >
+            <img src="/images/logo.svg" alt="" class="logo w-24" />
+            <div class="flex items-star space-x-3">
+              <img
+                src="/images/icon-instagram.svg"
+                alt="instagram"
+                class="ficon transition duration-150 w-4 h-4"
+              />
+              <img
+                src="/images/icon-twitter.svg"
+                alt="twitter"
+                class="ficon transition duration-150 w-4 h-4"
+              />
+              <img
+                src="/images/icon-facebook.svg"
+                alt="facebook"
+                class="ficon transition duration-150 w-4 h-4"
+              />
+              <img
+                src="/images/icon-pinterest.svg"
+                alt="pinterest"
+                class="ficon transition duration-150 w-4 h-4"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-[85%] mx-auto flex justify-start items-end text-right text-white text-sm md:hidden"
+        >
+          <a href="#">
+            <i class="fas fa-code"></i> by
+            <strong class="uppercase text-[10px]">AD-M INNOVATIONS</strong>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

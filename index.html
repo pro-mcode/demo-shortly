@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CA:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/output.css" />
+    <title>Shortly</title>
+    <script
+      src="https://kit.fontawesome.com/59a5ac1eda.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="global-container max-w-[1440px] mx-auto">
+      <!-- Navbar Area -->
+      <nav class="section-container relative py-6">
+        <div class="flex justify-between items-center">
+          <!-- Logo and links container -->
+          <div class="flex justify-center items-center space-x-8">
+            <!-- Logo Image -->
+            <a href="index.html"><img src="/images/logo.svg" alt="" /></a>
+            <!-- Menu Items -->
+            <div
+              class="hidden md:flex justify-center items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6"
+            >
+              <a
+                href="#feature"
+                class="text-extraSecondary hover:text-postSecondary text-base font-bold transition duration-150"
+                >Features</a
+              >
+              <a
+                href="#pricing"
+                class="text-extraSecondary hover:text-postSecondary text-base font-bold transition duration-150"
+                >Pricing</a
+              >
+              <a
+                href="#blog"
+                class="text-extraSecondary hover:text-postSecondary text-base font-bold transition duration-150"
+                >Blogs</a
+              >
+            </div>
+          </div>
+          <!-- Hamburger -->
+          <div
+                    class="flex flex-col justify-center items-center md:hidden m-0 p-0 h-fit"
+          >
+            <button
+            id="menu-btn"
+            type="button"
+            class="z-40 block hamburger md:hidden focus:outline-none border-0 p-0 m-0"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom mb-0 pb-0"></span>
+            </button>
+          </div>
+          <div
+            class="hidden justify-center items-center md:flex md:flex-row space-x-6"
+          >
+            <a href="login.html"
+              class="text-extraSecondary hover:text-postSecondary text-sm font-bold transition duration-150"
+            >
+              Login
+            </a>
+            <a href="signup.html"
+              class="px-5 py-2 bg-primary text-white text-sm font-bold rounded-full shadow-sm hover:opacity-70 transition duration-150"
+            >
+              Sign Up
+            </a>
+          </div>
+        </div>
+        <!-- Mobile Menu Items -->
+        <div id="mobile-menu" class="container bg-secondary py-8 px-4 absolute top-20 rounded-sm opacity-0 scale-95 pointer-events-none transition-all duration-200 ease-in-out
+        transform z-30">
+          <div class="flex flex-col justify-center items-center space-y-4">
+            <a href="#feature" class="text-base text-white font-semibold w-full text-center">Features</a>
+            <a href="#pricing" class="text-base text-white font-semibold w-full text-center">Pricing</a>
+            <a href="#blog" class="text-base text-white font-semibold w-full text-center">Blogs</a>
+            <a href="login.html" class="text-base text-white font-semibold w-full text-center pt-4 border-t border-gray-500">Login</a>
+            <a href="signup.html" class="text-sm text-white font-semibold w-full text-center py-2 px-6 bg-primary rounded-full shadow-sm hover:opacity-70">Sign Up</a>
+          </div>
+  
+        </div>
+      </nav>
+      <!-- Hero Section -->
+      <section id="hero">
+        <!-- Hero Container -->
+        <div class="section-container py-24 ">
+          <!-- Hero Content -->
+          <div
+            class="flex flex-col justity-center items-center space-y-8 md:flex-row-reverse md:space-y-0"
+          >
+            <!-- Hero Image -->
+            <div class="w-3/4 md:w-1/2 md:ml-8">
+              <img src="/images/illustration-working.svg" alt="" />
+            </div>
+            <!-- Hero Text Content -->
+            <div
+              class="flex flex-col justify-center max-w-3/4 space-y-4 mx-auto md:w-1/2"
+            >
+              <h1
+                class="text-tertiary text-center text-3xl max-w-[20rem] font-extrabold tracking-wide capitalize mx-auto md:text-4xl md:max-w-lg md:text-left md:mx-0 lg:max-w-[20rem]"
+              >
+                More than just shorter links
+              </h1>
+              <p
+                class="text-lg text-center text-gray-400 font-medium tracking-tight leading-snug md:text-lg md:text-left md:max-w-lg"
+              >
+              Shorten long links in seconds. Share cleaner URLs and track clicks — fast, simple, and reliable.
+              </p>
+              <a href="signup.html"
+                class="px-6 py-3 bg-primary text-white text-base font-bold shadow-sm hover:opacity-70 rounded-full max-w-fit mx-auto md:mx-0"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Shorten Section -->
+      <section id="shorten" class="bg-gray-100 py-12 mx-auto">
+        <!-- Shorten Container -->
+        <div class="container relative w-3xl max-w-[90%] mx-auto space-y-4">
+          <!-- Form Container -->
+          <form
+            id="form"
+            class="relative flex flex-col justify-center items-center space-y-4 bg-secondary rounded-lg -mt-24 p-6 max-w-3xl mx-auto md:flex-row md:space-y-0 md:space-x-2 md:-mt-20"
+          >
+            <input
+              type="text"
+              id="input"
+              class="flex-1 bg-white p-3 placeholder:text-gray-400 text-sm text-gray-600 font-medium rounded-lg w-full focus:outline-none border"
+              placeholder="Shorten a link here"
+            />
+            <button
+              class="bg-primary py-3 px-5 text-white text-sm font-semibold rounded-lg w-full md:w-fit focus:outline-none shadow-sm hover:opacity-70 transition duration-150"
+            >
+              Shorten It!
+            </button>
+            <div id="err-msg" class="absolute bottom-1 left-7 text-sm font-semibold italic self-start text-red-500"></div>
+          </form>
+          <!-- Links Container -->
+          <!-- Link 1 -->
+          <div
+            class="flex flex-col justify-between items-center space-y-2 bg-white p-5 rounded-lg max-w-3xl mx-auto md:flex-row md:space-y-0"
+          >
+            <p
+              class="text-postSecondary text-base text-center font-semibold md:text-left"
+            >
+              https://frontend-mentor.io
+            </p>
+            <div
+              class="flex flex-col justify-center items-center space-y-2 md:flex-row md:space-y-0 md:space-x-2"
+            >
+              <p
+                class="text-primary text-sm text-center font-semibold md:text-left"
+              >
+                https://rel.ink/J7etdK
+              </p>
+              <button
+              class="bg-primary py-3 px-5 text-white text-sm font-medium rounded-lg md:w-fit focus:outline-none shadow-sm hover:opacity-70 transition duration-150"
+            >
+              Copy
+            </div>
+          </div>
+          <!-- Link 2 -->
+          <div
+            class="flex flex-col justify-between items-center space-y-2 bg-white p-5 rounded-lg max-w-3xl mx-auto md:flex-row md:space-y-0"
+          >
+            <p
+              class="text-postSecondary text-base text-center font-semibold md:text-left"
+            >
+              https://twitter/frontend-mentor
+            </p>
+            <div
+              class="flex flex-col justify-center items-center space-y-2 md:flex-row md:space-y-0 md:space-x-2"
+            >
+              <p
+                class="text-primary text-sm text-center font-semibold md:text-left"
+              >
+                https://rel.ink/H3qs9V
+              </p>
+              <button
+              class="bg-secondary py-3 px-5 text-white text-sm font-medium rounded-lg md:w-fit focus:outline-none shadow-sm hover:opacity-70 transition duration-150"
+            >
+              Copy
+            </div>
+          </div>
+          <!-- Link 3 -->
+          <div
+            class="flex flex-col justify-between items-center space-y-2 bg-white p-5 rounded-lg max-w-3xl mx-auto md:flex-row md:space-y-0"
+          >
+            <p
+              class="text-postSecondary text-base text-center font-semibold md:text-left"
+            >
+              https://linkedin/frontend-mentor
+            </p>
+            <div
+              class="flex flex-col justify-center items-center space-y-2 md:flex-row md:space-y-0 md:space-x-2"
+            >
+              <p
+                class="text-primary text-sm text-center font-semibold md:text-left"
+              >
+                https://rel.ink/yR45iW
+              </p>
+              <button
+              class="bg-primary py-3 px-5 text-white text-sm font-medium rounded-lg md:w-fit focus:outline-none shadow-sm hover:opacity-70 transition duration-150"
+            >
+              Copy
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Features Section -->
+      <section id="feature" class="bg-gray-100 py-12 mx-auto">
+        <div class="container mx-auto md:py-12">
+          <h2 class="text-postSecondary text-2xl font-semibold text-center mb-4 md:text-4xl">Advanced Statistics</h2>
+          <p class="text-extraSecondary text-base font-medium text-center max-w-xs mx-auto md:max-w-md">Gain deep insights into your links. Track clicks, monitor engagement, and understand how your audience interacts — all in real time.</p>
+        </div>
+        <div class="relative container flex flex-col justify-center items-start space-y-20 py-6 md:py-12 md:mb-12 md:flex-row md:space-y-0 md:gap-x-6 max-w-[90%] lg:max-w-[80%] xl:max-w-6xl mx-auto">
+          <!-- Horizontal/Vertical line -->
+          <div class="absolute left-[50%] -translate-x-1/2 bg-primary w-2 h-1/2 my-auto md:left-[30%] md:top-[50%] md:w-[50%] md:mx-auto md:my-0 md:h-2 md:-translate-y-1/2 md:translate-x-0"></div>
+          <!-- Card 1 -->
+          <div class="relative flex flex-col justify-center items-center bg-white px-8 py-16 rounded-md md:w-1/3 mx-auto space-y-4">
+            <h4 class="text-postSecondary text-lg font-semibold text-center md:text-left md:self-start">
+              Brand Recognition
+            </h4>
+            <p class="text-sm text-extraSecondary font-medium text-center md:text-left">
+              Boost your brand’s visibility and trust. Using custom short links puts your brand front and center, making every shared link an opportunity to strengthen recognition. Consistent, branded URLs build credibility and help your audience remember you.
+            </p>
+            <div class="absolute -top-[20%]  bg-postSecondary p-4 rounded-full md:self-start">
+              <img src="/images/icon-brand-recognition.svg" alt="">
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="relative flex flex-col justify-center items-center bg-white px-8 py-16 rounded-md mx-auto space-y-4 md:w-1/3 md:translate-y-6">
+            <h4 class="text-postSecondary text-lg font-semibold text-center md:text-left md:self-start">
+              Detailed Records
+            </h4>
+            <p class="text-sm text-extraSecondary font-medium text-center md:text-left">
+              Get detailed insights into every click. Our advanced analytics provide real-time data on link performance — including click counts, geographic location, device type, and more. Make smarter decisions with accurate tracking at your fingertips.
+            </p>
+            <div class="absolute -top-[20%]  bg-postSecondary p-4 rounded-full md:self-start">
+              <img src="/images/icon-detailed-records.svg" alt="">
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="relative flex flex-col justify-center items-center bg-white px-8 py-16 rounded-md mx-auto space-y-4 md:w-1/3 md:translate-y-12">
+            <h4 class="text-postSecondary text-lg font-semibold text-center md:text-left md:self-start">
+              Fully Customizable
+            </h4>
+            <p class="text-sm text-extraSecondary font-medium text-center md:text-left">
+              Make your links truly yours. Customize every short link to match your brand — from the URL slug to the link appearance. Whether you're promoting a product or sharing content, your links stay consistent with your style and message.
+            </p>
+            <div class="absolute -top-[20%]  bg-postSecondary p-4 rounded-full md:self-start">
+              <img src="/images/icon-fully-customizable.svg" alt="">
+            </div>
+          </div>
+  
+          
+        </div>
+      </section>
+      <!-- Pricing Section -->
+      <section id="pricing" class="bg-gray-100 py-12 mx-auto flex flex-col justify-center items-center">
+        <div class="container mx-auto md:py-12">
+          <h2 class="text-postSecondary text-2xl font-semibold text-center mb-4 md:text-4xl">Our Pricing</h2>
+          <p class="text-extraSecondary text-base font-medium text-center max-w-xs mx-auto md:max-w-md">Simple, transparent pricing. Choose a plan that fits your needs — from free basic tools to advanced features for growing teams. No hidden fees, just straightforward value.</p>
+        </div>
+        <!-- Inner Container -->
+        <div
+          class="container flex flex-col my-12 justify-center items-center space-y-4 px-12 max-w-[25rem] mx-auto md:gap-x-4 md:space-y-0 md:flex-row md:mx-6 md:my-0 md:max-w-5xl"
+        >
+          <!-- Pricing Card 1 -->
+          <div class="bg-extraSecondary p-2 rounded-xl w-full md:w-1/3">
+            <!-- Inner Card -->
+            <div class="bg-secondary rounded-xl py-8">
+              <h3 class="text-white text-center text-sm font-medium mx-6">
+                BASIC
+              </h3>
+              <h2
+                class="text-white text-center text-5xl font-medium font-serif mt-8"
+              >
+                $19
+              </h2>
+              <h4
+                class="text-white text-center text-xs font-normal mt-2 mb-8 mx-6"
+              >
+                per month
+              </h4>
+              <div
+                class="text-center border border-violet-600 rounded-lg px-8 pt-1 pb-2 w-fit mx-auto my-6"
+              >
+                <a href="" class="text-white text-xs font-normal"> Purchase </a>
+              </div>
+              <div class="border-t border-slate-600 my-10"></div>
+              <div class="list-items mx-auto text-center text-white space-y-1">
+                <div class="flex justify-center items-center">
+                  <i class="fa-solid fa-check text-sm"></i>
+                  <span class="text-xs font-normal ml-2">Shorten unlimited links</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Basic link analytics</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">One custom link</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">30-day link history</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Community support</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-xmark"></i>
+                  <span class="text-xs font-normal ml-2">Link expiration & QR codes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pricing Card -->
+          <div class="bg-primary p-2 rounded-xl w-full md:w-1/3">
+            <!-- Inner Card -->
+            <div class="bg-secondary rounded-xl py-8">
+              <h3 class="text-white text-center text-sm font-medium mx-6">
+                Pro (Most Popular)
+              </h3>
+              <h2
+                class="text-white text-center text-5xl font-medium font-serif mt-8"
+              >
+                $49
+              </h2>
+              <h4
+                class="text-white text-center text-xs font-normal mt-2 mb-8 mx-6"
+              >
+                per month
+              </h4>
+              <div
+                class="text-center bg-violet-600 rounded-lg px-8 pt-1 pb-2 w-fit mx-auto my-6 hover:bg-violet-700 cursor-pointer duration-200"
+              >
+                <a href="" class="text-white text-xs font-normal"> Purchase </a>
+              </div>
+              <div class="border-t border-slate-600 my-10"></div>
+              <div class="list-items mx-auto text-center text-white space-y-1">
+                <div class="flex justify-center items-center">
+                  <i class="fa-solid fa-check text-sm"></i>
+                  <span class="text-xs font-normal ml-2"
+                    >Everything in Basic, plus:</span
+                  >
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Advanced link analytics</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Branded/custom domains</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Multiple custom links</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Priority support</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Link expiration & QR codes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pricing Card -->
+          <div class="bg-extraSecondary p-2 rounded-xl w-full md:w-1/3">
+            <!-- Inner Card -->
+            <div class="bg-secondary rounded-xl py-8">
+              <h3 class="text-white text-center text-sm font-medium mx-6">
+                Enterprise
+              </h3>
+              <h2
+                class="text-white text-center text-5xl font-medium font-serif mt-8"
+              >
+                $99
+              </h2>
+              <h4
+                class="text-white text-center text-xs font-normal mt-2 mb-8 mx-6"
+              >
+                per month
+              </h4>
+              <div
+                class="text-center border border-violet-600 rounded-lg px-8 pt-1 pb-2 w-fit mx-auto my-6"
+              >
+                <a href="" class="text-white text-xs font-normal"> Purchase </a>
+              </div>
+              <div class="border-t border-slate-600 my-10"></div>
+              <div class="list-items mx-auto text-center text-white space-y-1">
+                <div class="flex justify-center items-center">
+                  <i class="fa-solid fa-check text-sm"></i>
+                  <span class="text-xs font-normal ml-2">Everything in Pro, plus:</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">Team collaboration tools</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2">API access & integrations</span>
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2"
+                    >Uptime SLA</span
+                  >
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2"
+                    >Bulk link management</span
+                  >
+                </div>
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  <span class="text-xs font-normal ml-2"
+                    >Dedicated account support</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Blog Section -->
+      <section id="blog" class="bg-gray-100 py-12 md:py-24 px6 mx-auto md:px-0">
+        <div
+          class="section-container max-w-[95%] mx-auto mb-6 md:flex md:justify-between md:items-center md:gap-x-12 md:pt-12 md:max-w-[80%]"
+        >
+          <h2
+            class="text-black text-2xl text-center font-bold md:text-4xl md:text-left"
+          >
+            Learn how businesses succeed with Shortly.
+          </h2>
+
+          <div class="hidden md:flex gap-x-4">
+            <i
+              class="fa-solid fa-arrow-left text-2xl font-extrabold p-4 border-2 border-gray-500 rounded-2xl shadow-sm hover:bg-gray-300 transition duration-150"
+            ></i>
+            <i
+              class="fa-solid fa-arrow-right text-2xl font-extrabold p-4 border-2 border-gray-500 rounded-2xl shadow-sm hover:bg-gray-300 transition duration-150"
+            ></i>
+          </div>
+        </div>
+
+        <div
+          id="swiper-container"
+          class="section-container md:max-w-[80%] mx-auto md:swiper-container md:overflow-x-auto scroll-smooth"
+        >
+          <div
+            id="card-container"
+            class="flex flex-col justify-start items-stretch space-y-4 md:flex-row md:space-y-0 md:gap-x-4 py-4 mx-auto"
+          ></div>
+
+          <div class="flex flex-col items-center mt-4 space-y-3 md:hidden">
+            <button
+              id="prev-btn"
+              class="px-6 py-3 bg-primary text-white text-base font-bold shadow-sm hover:opacity-70 active:opacity-100 rounded-md max-w-fit mx-auto"
+            >
+              Load Previous Blogs
+            </button>
+            <button
+              id="load-more-btn"
+              class="px-6 py-3 bg-primary text-white text-base font-bold shadow-sm hover:opacity-70 active:opacity-100 rounded-md max-w-fit mx-auto"
+            >
+              Load More Blogs
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Get Started -->
+      <section id="get-started" class="relative bg-boostMobile md:bg-boostDesktop bg-cover bg-center  bg-no-repeat mx-auto py-20">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-secondary -z-20"></div>
+          <div class="flex flex-col justify-center items-center z-10 space-y-2">
+            <h4 class="text-white text-lg text-center font-semibold md:text-2xl z-10">
+              Boost your links today!
+            </h4>
+            <a href="signup.html"
+                class="px-6 py-3 bg-primary text-white text-base font-bold shadow-sm hover:opacity-70 rounded-full max-w-fit mx-auto z-10 md:mx-0"
+              >
+                Get Started
+            </a>
+          </div>
+      </section>
+      <!-- Footer -->
+      <footer id="footer" class="bg-postSecondary py-12 mx-auto">
+          <div class="container max-w-[90%] mx-auto lg:max-w-[80%]">
+            <div class="footer-wrapper grid grid-cols-3 gap-4 md:flex justify-center items-start md:flex-row md:gap-x-4 md:justify-between md:items-start">
+              <img src="/images/logo.svg" alt="" class="logo hidden md:block">
+              <!-- Features -->
+              <div class="col-start-1 flex flex-col space-y-2 w-full md:w-fit">
+                <h5 class="footer-heading">
+                  Features
+                </h5>
+                <p class="footer-link">Link Shortening</p>
+                <p class="footer-link">Branded Links</p>
+                <p class="footer-link">Analytics</p>
+              </div>
+              <!-- Pricing -->
+              <div class="col-start-2 flex flex-col space-y-2 w-full md:w-fit">
+                <h5 class="footer-heading">
+                  Resources
+                </h5>
+                <p class="footer-link">Blog</p>
+                <p class="footer-link">Developers</p>
+                <p class="footer-link">Support</p>
+              </div>
+              <!-- Resources -->
+              <div class="col-start-3 flex flex-col space-y-2 w-full md:w-fit">
+                <h5 class="footer-heading">
+                  Company
+                </h5>
+                <p class="footer-link">About Us</p>
+                <p class="footer-link">Our Team</p>
+                <p class="footer-link">Career</p>
+                <p class="footer-link">Contact</p>
+              </div>
+              <!-- Desktop Social Icons -->
+              <div class="hidden md:block">
+                <div class="md:flex items-star space-x-3">
+                  <img src="/images/icon-instagram.svg" alt="instagram" class="ficon transition duration-150">
+                  <img src="/images/icon-twitter.svg" alt="twitter" class="ficon transition duration-150">
+                  <img src="/images/icon-facebook.svg" alt="facebook" class="ficon transition duration-150">
+                  <img src="/images/icon-pinterest.svg" alt="pinterest" class="ficon transition duration-150">
+                </div>
+                <div
+                class="text-right text-white text-xs mt-4"
+                >
+                <a href="#">
+                  <i class="fas fa-code"></i> by
+                  <strong class="uppercase">AD-M INNOVATIONS</strong>
+                </a>
+                </div>
+              </div>
+            </div>
+            <!-- Mobile Social Icons -->
+             <div class="container">
+               <div class="flex justify-between items-center md:hidden pt-8 pb-2 max-w-[85%] mx-auto">
+                   <img src="/images/logo.svg" alt="" class="logo w-24">
+                   <div class="flex items-star space-x-3 ">
+                    <img src="/images/icon-instagram.svg" alt="instagram" class="ficon transition duration-150 w-4 h-4">
+                    <img src="/images/icon-twitter.svg" alt="twitter" class="ficon transition duration-150 w-4 h-4">
+                    <img src="/images/icon-facebook.svg" alt="facebook" class="ficon transition duration-150 w-4 h-4">
+                    <img src="/images/icon-pinterest.svg" alt="pinterest" class="ficon transition duration-150 w-4 h-4">
+                   </div>
+               </div>
+             </div>
+             <div
+                class="max-w-[85%] mx-auto flex justify-start items-end text-right text-white text-sm md:hidden"
+              >
+             <a href="#">
+               <i class="fas fa-code"></i> by
+               <strong class="uppercase text-[10px]">AD-M INNOVATIONS</strong>
+             </a>
+            </div>
+          </div>
+      </footer>
+    </div>
+    <script src="js/blog.js" type="module"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

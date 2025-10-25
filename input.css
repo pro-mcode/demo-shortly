@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.logo {
+  filter: brightness(0) invert(1) contrast(90%);
+}
+.ficon:hover {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(47%) saturate(3103%)
+    hue-rotate(139deg) brightness(93%) contrast(96%);
+}
+.boost-desktop {
+  background-image: "url('./images/bg-boost-desktop.svg')";
+}
+.boost-mobile {
+  background-image: "url('./images/bg-boost-mobile.svg')";
+}
+.section-container {
+  @apply container max-w-[90%] mx-auto lg:max-w-[80%];
+}
+.footer-heading {
+  @apply text-sm text-white text-center font-semibold md:text-base md:text-left;
+}
+.footer-link {
+  @apply text-extraSecondary text-xs text-center font-medium cursor-pointer md:text-sm md:text-left;
+}
+.hamburger {
+  position: relative;
+  width: 24px;
+  height: 16px;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 9;
+}
+.hamburger-middle {
+  transform: translateY(6px);
+}
+.hamburger-bottom {
+  transform: translateY(12px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  transition: all 0.3s ease-in-out;
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  transition: all 0.3s ease-in-out;
+}
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+#swiper-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge */
+#swiper-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: adjust;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 1rem; /* 16px = your gap */
+  padding-left: 1rem;
+}
+
+.blog-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  max-width: 30rem;
+  width: 100%;
+  min-width: 18rem; /* or something that fits one card nicely */
+  scroll-snap-align: start;
+}
+.fa-arrow-left,
+.fa-arrow-right {
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fa-arrow-left.disabled,
+.fa-arrow-right.disabled {
+  opacity: 0;
+  pointer-events: none; /* Prevent clicks */
+  cursor: default;
+}
