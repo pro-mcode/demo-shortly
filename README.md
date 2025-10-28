@@ -7,7 +7,7 @@ Includes Login and Sign Up pages for user authentication and a seamless experien
 
 ---
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://demo-Loopstudio.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://demo-shortly.netlify.app)
 [![Built with Tailwind CSS](https://img.shields.io/badge/Built%20with-TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![JavaScript ES6](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -61,7 +61,7 @@ Built for speed, accessibility, and pixel-perfect design using **Tailwind CSS**.
 
 ## 📁 Folder Structure
 
-loopstudio/
+demo-shortly/
 ├── assets/
 │ ├── images/
 │ └── icons/
