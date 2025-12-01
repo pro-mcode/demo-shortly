@@ -51,7 +51,7 @@ Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/pro-mcode/demo-shortly.git
-cd weather-now
+cd demo-shortly
 npm install
 ```
 
